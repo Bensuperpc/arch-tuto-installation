@@ -189,8 +189,8 @@ Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu�
 On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratiques à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
 
 ```
-pacstrap /mnt base base-devel pacman-contrib
-pacstrap /mnt zip unzip p7zip vim mc alsa-utils syslog-ng mtools dosfstools lsb-release ntfs-3g exfat-utils bash-completion (sur une seule ligne !)
+pacstrap /mnt linux linux-firmware base base-devel pacman-contrib
+pacstrap /mnt zip unzip p7zip vim mc alsa-firmware alsa-utils syslog-ng mtools dosfstools lsb-release btrfs-progs ntfs-3g exfat-utils git bash-completion (sur une seule ligne !)
 ```
 
 Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième ligne pacstrap le paquet linux-lts. Pour ntfs-3g, c’est utile si vous êtes amené à utiliser des disques formatés en ntfs. Si ce n’est pas le cas, vous pouvez l’ignorer allègrement.
@@ -640,7 +640,7 @@ Dans les précédentes versions, il y avait k3b, mais il a été intégré dans 
 L’installation se déroule ainsi :
 
 ```
-sudo pacman -S plasma kde-applications digikam elisa kdeconnect packagekit-qt5
+sudo pacman -S plasma kde-applications digikam elisa kdeconnect packagekit-qt5 partitionmanager
 ```
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois sddm :
 

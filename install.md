@@ -333,6 +333,13 @@ Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au com
 passwd root
 ```
 
+Si vous avez des problèmes de sync avec teams ect...
+
+```
+sudo systemctl enable systemd-timesyncd.service
+timedatectl set-ntp true
+```
+
 Pour le réseau, installer et activer NetworkManager est une bonne idée. Vous pouvez remplacer NetworkManager par le duo wicd et wicd-gtk **en cas de problème.** Pour wicd :
 
 ```
